@@ -1,0 +1,15 @@
+html {
+    font-family: 'Roboto', sans-serif;
+    background-color: #EAC926;
+ }
+ h3 {font-size: 24px;}
+ footer {text-align: center;}
+ 
+
+
+.price {font-size: 18px;}
+.discount {font-size: 16px;}
+.description {font-size: 16px;}
+i2 {color: #1259c3;}
+.gris {color: #666;
+        font-weight: bolder;}

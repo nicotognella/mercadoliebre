@@ -1,10 +1,10 @@
 let express = require ('express');
-let path = require ('path') 
-
 let app = express ();
 
+let path = require ('path') 
+ // seteamos los archivos publicos para poder acceder a esta carpeta con imagenes y hojas de estilo
+// si no lo seteamos el servidor va a tomar public como una carpeta privada y no me lo va a mostrar
 let publicPath = path.resolve(__dirname, './public')
-
 app.use (express.static (publicPath))
 
 app.listen (4000, () => console.log ("todo ok"));
