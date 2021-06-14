@@ -12,3 +12,7 @@ app.listen(4001, () => console.log("todo ok"));
 app.get('/', (req, res) => {
     res.sendFile(path.resolve(__dirname, './views/home.html'))
 })
+
+app.get('/', (req, res) => {
+    res.sendFile(path.resolve(__dirname, './views/register.html'))
+})

@@ -8,14 +8,15 @@
 
     <!-- Llamar al CSS, y vinculo la hoja de estilos css con el html!!!-->
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <!-- tengo que agregar a la carpeta public/css el archivo normalize.css (lo saco de goglee) para que me acomode la pagina de una forma general de navegadores-->
     <link rel="stylesheet" href="/css/normalize.css">
     <!--permite que nuestro sitio se ajuste perfectamente a cualquier resolucion de pantalla-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- librerias-->
     <script src="https://kit.fontawesome.com/c1249e3e65.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
 
 
 
@@ -23,31 +24,36 @@
 
 <body>
     <main>
-        <header>
+        <header class="main-header">
             <div class="contenedor-inicio">
                 <div class="fondoAmarillo ">
-                    <img src="/images/logo-mercado-liebre.svg " width="90% " alt="Logo de MercadoLiebre ">
-                    <p class="gris "> Lugar para poner barra de búsqueda</p>
-                    <p class="gris "><i class="fas fa-hand-holding-usd "></i>Comprá en cuotas y sin tarjeta de crédito</p>
-                    <div class="site ">
-                        <ul>
+                    <div class="main-header-top-bar">
+                        <img src="/images/logo-mercado-liebre.svg " width="90% " alt="Logo de MercadoLiebre" class="logo">
+                        <div class="searchbar"> <input type="text" placeholder="Buscar productos, marcas y mas"> </div>
+                        <h2 class="copyheader"><i class="fas fa-hand-holding-usd "></i>Comprá en cuotas y sin tarjeta de crédito
+                        </h2>
+                    </div>
+                    <div class="site">
+                        <ul class="first-nav-bar">
                             <li><a href="# ">Ofertas</a></li>
                             <li><a href="# ">Tiendas Oficiales</a></li>
                             <li><a href="# ">Vender</a></li>
-                            <li><a href="# ">Ayuda</a></li>
+                            <li><a href="# ">Ayuda</a>
+                            </li>
                         </ul>
-                        <ul>
-                            <li><a href="# ">Creá tu cuenta <i class="far fa-id-card "></i></a></li>
+                        <ul class="second-nav-bar">
+                            <li><a href="/views/register.html">Creá tu cuenta <i class="far fa-id-card "></i></a></li>
                             <li><a href="# ">Ingresá<i class="fas fa-sign-in-alt "></i></a></li>
                             <li><a href="# ">Mis compras<i class="fas fa-shopping-basket "></i></a></li> <br>
+
                         </ul>
                     </div>
                     <div class="menubar "><i class="fas fa-bars menuburger "></i></div>
                 </div>
 
             </div>
-            </div class="contenedor-inicio">
-            <div class="banner "><img src="/images/img-home-banner.jpg " width="100%" alt="Banner de ofertas "></div>
+            </div class="contenedor-inicio ">
+            <div class="banner "><img src="/images/img-home-banner.jpg " width="100% " alt="Banner de ofertas "></div>
         </header>
 
 
@@ -146,6 +152,7 @@
         </div>
     </main>
 </body>
+
 <footer>
 
     <i2 class="far fa-credit-card icono"></i2>
@@ -161,5 +168,7 @@
     <p>Copyright © 1999-2019 MercadoLiebre S.R.L.</p>
 
 </footer>
+
+</html>
 
 </html>
