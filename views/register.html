@@ -1,9 +1,6 @@
 <!--
-
-■ Contraseña
-■ Confirmar contraseña
 ■ Botón de enviar que nos lleve a la página principal
-■ Botón de borrar todos los datos del formulario-->
+-->
 
 <!DOCTYPE html>
 <html>
@@ -16,6 +13,7 @@
 
     <!-- Llamar al CSS, y vinculo la hoja de estilos css con el html!!!-->
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/for-style.css">
     <!-- tengo que agregar a la carpeta public/css el archivo normalize.css (lo saco de goglee) para que me acomode la pagina de una forma general de navegadores-->
     <link rel="stylesheet" href="/css/normalize.css">
     <!--permite que nuestro sitio se ajuste perfectamente a cualquier resolucion de pantalla-->
@@ -29,6 +27,7 @@
 
 
 </head>
+<main>
 <header class="main-header">
     <div class="contenedor-inicio">
         <div class="fondoAmarillo ">
@@ -47,8 +46,8 @@
                     </li>
                 </ul>
                 <ul class="second-nav-bar">
-                    <li><a href="/views/register.html">Creá tu cuenta <i class="far fa-id-card "></i></a></li>
-                    <li><a href="# ">Ingresá<i class="fas fa-sign-in-alt "></i></a></li>
+                    <li><a href="register">Creá tu cuenta <i class="far fa-id-card "></i></a></li>
+                    <li><a href="login">Ingresá<i class="fas fa-sign-in-alt "></i></a></li>
                     <li><a href="# ">Mis compras<i class="fas fa-shopping-basket "></i></a></li> <br>
 
                 </ul>
@@ -61,51 +60,66 @@
     <div class="banner "><img src="/images/img-home-banner.jpg " width="100% " alt="Banner de ofertas "></div>
 </header>
 
+<div class="register">
+    <form action="/register.html" method="GET">
+        <div class="etiqueta">
+            <label for="nombre"></label>
+            <input type="text" name="nombre" id="nombre" placeholder="Nombre y apellido">
+        </div>
+        <div class="etiqueta">
+            <label for="usuario"></label>
+            <input type="text" name="usuario" id="usuario" placeholder="Nombre de usuario">
+        </div>
+        <div class="etiqueta">
+            <label for="mail"></label>
+            <input type="email" name="mail" id="mail" placeholder="Direccion de email">
+        
+        </div>
+        <div class="etiqueta">
+            <label for="nacimiento"></label>
+            <input type="date" name="nacimiento" id="nacimiento">
+        </div>
+        <div class="etiqueta">
+            <label for="domicilio"></label>
+            <input type="text" name="domicilio" id="domicilio" placeholder="Domicilio">
+        </div>
+        <div>
+            <label for="perfil"> Perfil de usuario</label>
+            <select name="perfil">
+                <option value="comprar">Comprar</option>
+                <option value="vender">Vender</option>
+            </select>
+        </div>
+        <div class="categorias">
+            <label for="interes"> Categorías de interes
+                <label><input type="checkbox" name="interes" value="electro">Electro</label>
+                <label><input type="checkbox" name="interes" value="moda">Moda</label>
+                <label><input type="checkbox" name="interes" value="hogar">Hogar</label>
+                <label><input type="checkbox" name="interes" value="jugueteria">Juguetería</label>
+                <label><input type="checkbox" name="interes" value="vida sana">Vida sana</label>
+            </label>
+        </div>
+        <div>
+            <label for="foto perfil">
+                <input type="file" id="foto perfil" name="foto perfil" accept=".jpg, .html" multiple>
+            </label>
+        </div>
+        <div class="etiqueta">
+            <label for="contrasena"> Password
+                <input type="password" id="contrasena" name="contrasena"  required>
+            </label>
+            <label for="contrasena"> Confirm password
+                <input type="password" id="contrasena" name="contrasena" required>
+            </label>
+        </div>
+        <div class="button-envborrar">
+            <button type="submit" class="envbor">Enviar</button>
+            <button type="reset" class="envbor">Borrar</button>
+        </div>
 
-<form action="/register.html" method="GET">
-    <div>
-        <label for="nombre"> Nombre y apellido</label>
-        <input type="text" name="nombre" id="nombre">
-    </div>
-    <div>
-        <label for="usuario"> Nombre de usuario</label>
-        <input type="text" name="usuario" id="usuario">
-    </div>
-    <div>
-        <label for="nacimiento"> Fecha de nacimiento</label>
-        <input type="date" name="nacimiento" id="nacimiento">
-    </div>
-    <div>
-        <label for="domicilio"> Domicilio</label>
-        <input type="text" name="domicilio" id="domicilio">
-    </div>
-    <div>
-        <label for="perfil"> Perfil de usuario</label>
-        <select name="perfil">
-            <option value="comprar">Comprar</option>
-            <option value="vender">Vender</option>
-        </select>
-    </div>
-    <div>
-        <label for="interes"> Categorías de interes
-            <label><input type="checkbox" name="interes" value="electro">Electro</label>
-            <label><input type="checkbox" name="interes" value="moda">Moda</label>
-            <label><input type="checkbox" name="interes" value="hogar">Hogar</label>
-            <label><input type="checkbox" name="interes" value="jugueteria">Juguetería</label>
-            <label><input type="checkbox" name="interes" value="vida sana">Vida sana</label>
-        </label>
-    </div>
-    <div>
-        <label for="foto perfil">
-            <input type="file" id="foto perfil" name="foto perfil" accept=".jpg, .html" multiple>
-        </label>
-    </div>
-    <div>
-        <label for="contrasena">
-            <input type="password" id="contrasena" name="contrasena" required>
-        </label>
-    </div>
-</form>
+    </form>
+</div>
+</main>
 <footer>
 
     <i2 class="far fa-credit-card icono"></i2>
@@ -113,7 +127,8 @@
     <p>Con MercadoLiebreCash tenés cuotas sin interés con tarjeta o efectivoen puntos de pago. ¡Y siempre es seguro!</p>
     <i2 class="fas fa-gift icono"></i2>
     <h4>Envío gratis desde los $ 2.500</h4>
-    <p>Solo por estar registrad@ en MercadoLiebre tenés envíos gratis en miles de productos. Es un beneficio de MercadoPuntos.
+    <p>Solo por estar registrad@ en MercadoLiebre tenés envíos gratis en miles de productos. Es un beneficio de
+        MercadoPuntos.
     </p>
     <i2 class="fas fa-lock icono"></i2>
     <h4>Seguridad de principio a fin</h4>
@@ -121,6 +136,7 @@
     <p>Copyright © 1999-2019 MercadoLiebre S.R.L.</p>
 
 </footer>
+
 </html>
 
 </html>
