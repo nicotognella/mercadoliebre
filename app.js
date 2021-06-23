@@ -7,7 +7,7 @@ let path = require('path')
 let publicPath = path.resolve(__dirname, './public')
 app.use(express.static(publicPath))
 
-app.listen(4001, () => console.log("todo ok"));
+app.listen(process.env.PORT || 4001, () => console.log("todo ok"));
 
 app.get('/', (req, res) => {
     res.sendFile(path.resolve(__dirname, './views/home.html'))
