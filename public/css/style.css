@@ -38,6 +38,7 @@ footer {
     width: 100vw;
     display: flex;
     flex-direction: column;
+    
 }
 
 main {
@@ -47,13 +48,27 @@ main {
     display: flex;
 }
 
+.main-header-top-bar {
+    display: flex;
+    padding: 10px;
+    justify-content: space-around;
+}
+
 .menubar {
     text-align: center;
 }
 
 .logo {
-    width: 200px;
+    display: flex;
+    flex-grow: 0.5;
 }
+
+.searchbar {display: flex;
+    align-items: center;
+    flex-grow: 0.5;}
+
+.search {border: none;
+border-radius: 15px;}
 
 .menuburger {
     border-radius: 25%;
@@ -66,10 +81,6 @@ main {
     text-align: center;
     display: block;
     border-color: #3483fa;
-}
-
-.main-header-top-bar {
-    padding: 10px;
 }
 
 .imgicon,
@@ -85,26 +96,21 @@ main {
     flex-wrap: wrap;
 }
 
-.price {
-    font-size: 18px;
-    flex-grow: 0.3;
-    width: 0px;
-}
-
-.discount {
-    font-size: 16px;
-    flex-grow: 0.7;
-}
-
 .description {
     font-size: 16px;
+    opacity: 0;
+    transition: 450ms;
+}
+/* animaciones  */
+
+.description:hover {
+    opacity: 1;
 }
 
 .icono {
     color: #3483fa;
 }
 
-.searchbar,
 .copyheader {
     color: #666;
     font-weight: 400;
@@ -146,20 +152,96 @@ main {
 }
 
 .articulo {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 10px;
+    position: relative;
+    margin: 10px;
+    max-width: 250px;
+    min-width: none;
+}
+.product_img {
+    max-width: 245px;
+}
+.articulo:hover {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100)
 }
 
 .div2 {
     border-top: 1px solid #ebebeb;
     margin: 15px;
-    ;
+    position: relative;
+    max-width: 245px;
+    display: flex;
+    flex-direction: column;
 }
 
+.imgicon {
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15px;
+    justify-content: flex-end;
+}
+
+
+
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 40px;
+    font-size: 20px;
+}
+
+.price {
+    flex-grow: 0.3;
+}
+
+.discount {flex-grow: 0.7;}
+
+.objfooter {display: flex;
+flex-direction: column;}
+
+.copyr {display: flex;
+justify-content: center;}
 
 /* como usamos la forma mobile-firstconfiguracion para mobil  */
 
 
 /*y aca ponemos las configuraciones para tablet y desktop*/
+
+@media (min-width: 1200px) {
+    .site {
+        margin-top: 50px;
+    }
+    .main-header-top-bar, .site {
+        max-width: 1200px;
+      }
+    .logo {
+        max-width: 400px;
+    }
+    .copyheader {
+        max-width: none;
+        font-size: 18px;
+        font-weight: 400px;
+    }
+    .contenedor-productos {
+        width: 25%;
+        
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .articulo {}
+
+}
 
 @media (min-width: 768px) {
     .main-header-top-bar {
@@ -191,23 +273,24 @@ main {
     .site li {
         margin: 0 5px;
     }
+
+    footer {
+        flex-direction: row;
+        display: contents;
+    }
+
+    .objfooter {flex-direction: row;}
+
+    .copyr {justify-content: left;}
+
+    .contenedor-productos {
+        width: 50%;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
 }
-@media (min-width: 1200px) {
-    .site {
-        margin-top: 50px;
-    }
-    .main-header-top-bar, .site {
-        max-width: 1200px;
-        margin: auto;}
-    .logo {
-        width: 250px;
-    }
-    .copyheader {
-        max-width: none;
-        font-size: 18px;
-        font-weight: 400px;
-    }
-}
+
+
 @media (min-width: 361px) {
     .description {
         display: block
@@ -219,7 +302,8 @@ main {
         display: flex;
         justify-content: space-between;
     }
-   
+   .articulo {
+margin-left: 100px;}
 }
 
 
@@ -228,47 +312,8 @@ main {
 .contenedor-productos {
     display: flex;
     width: 100%;
+    max-width: 100%;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.contenedor {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    height: 40px;
-}
-
-.imgicon {
-    display: block;
-    font-size: 16px;
-    padding: 5px;
-    width: 30px;
-    height: 30px;
-    border: 1px solid #39b54a;
-    background-color: #FFF;
-    border-radius: 50%;
-    position: initial;
-    right: 20px;
-    top: -15px;
-    justify-content: flex-end;
-}
-
-@media (min-width: 1024px) {
-    .contenedor-productos {
-        width: 25%;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-}
-
-@media (min-width: 768px) {
-    .contenedor-productos {
-        width: 50%;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-}
-
-
-/* pseudoselectores  */
