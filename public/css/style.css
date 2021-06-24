@@ -159,6 +159,7 @@ border-radius: 15px;}
     margin: 10px;
     max-width: 250px;
     min-width: none;
+    transition: 0.5s;
 }
 .product_img {
     max-width: 245px;
